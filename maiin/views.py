@@ -2,10 +2,19 @@ from django.shortcuts import render
 
 
 def home(request):
-    template_name = 'portfolio/home.html'
+    template_name = 'home.html'
     context = {
-        'title': 'Muhamamd Rifqi Dzakwan',
+        'title': 'Portfolio Muhammad Rifqi Dzakwan',
         'description': 'web portfolio saya',
-        'body': 'Halaman Utama'
+        'body': 'Halaman home'
+    }
+    return render(request, template_name, context)
+
+def about(request):
+    template_name = 'about.html'
+    context = {
+        'title': 'selamat datang di halaman about',
+        'description': 'web portfolio saya',
+        'body': 'Halaman about'
     }
     return render(request, template_name, context)
