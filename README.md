@@ -27,46 +27,7 @@ python -m venv .venv
 pip install django
 ```
 
-5. Tambahkan 1 fungsi views.py yaitu dengan cara
-
-**menambahkan file views.py di folder project yang kita buat tadi**
-
-nambahkan file views.py
-```shell
-type nul > views.py
-```
-
-isi code di views.py
-```shell
-from django.shortcuts import render
-
-
-def home(request):
-    template_name = 'portfolio/home.html'
-    context = {
-        'title': 'Muhamamd Rifqi Dzakwan',
-        'description': 'web portfolio saya',
-        'body': 'Halaman Utama'}
-
-    return render(request, template_name, context)
-```
-6. Buat HTML
-
-```shell
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio Muhammad Rifqi Dzakwan</title>
-</head>
-<body>
-    <h1>Portfolio Muhammad Rifqi Dzakwan</h1>
-    <p>HALOOO Selamat datang di halaman portfolio saya</p>
-</body>
-</html>
-```
-
-7. commit dan push yaitu dengan cara
+5. commit dan push yaitu dengan cara
 
 masukin file ke commit
 ```shell
