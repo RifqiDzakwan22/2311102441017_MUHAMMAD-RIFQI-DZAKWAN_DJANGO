@@ -1,6 +1,6 @@
 # ✨ Project Django
 ## 🖼️ Deskripsinya
-Website ini adalah web portfolio saya yang sudah pasti isinya tentang diri saya, sebelumnya perkenalkan nama saya Muhammad Rifqi Dzakwan bisa dipanggil Rifqi, dan saya adalah mahasiswa UMKT Samarinda jurusan S1 TEKNIK INFORTMATIKA.
+Website ini adalah web portfolio saya yang sudah pasti isinya tentang diri saya, sebelumnya perkenalkan nama saya Muhammad Rifqi Dzakwan bisa dipanggil Rifqi, dan saya adalah mahasiswa UMKT Samarinda jurusan S1 TEKNIK INFORTMATIKA. Untuk tambahannya saya membuat Django app bernama **myapp** untuk modelnya **pemainbola** ⚽
 ## 📱cara menjalankannya
 1. untuk yang pertama kita harus hapus folder project lama **(bukan yang berisi .gitignore dan README.md).**
 lalu jalankan perintahnya di cmd ya yaitu dengan cara
@@ -46,4 +46,12 @@ push gitnya
 git push origin main
 ```
 
+6. untuk membuat start apps
+```shell
+python manage.py startapp "nama app mu bebas aja"
+```
 
+7. untuk membuat migration
+```shell
+python manage.py makemigrations "nama app yang kamu buat tadi ;)"
+```
