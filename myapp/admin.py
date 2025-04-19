@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import PemainBola
+from myapp.models import PemainBola, Klub
 
-admin.site.register(PemainBola)
-# Register your models here.
+class PemainBolaAdmin(admin.ModelAdmin):
+    list_display = ['nama', 'id', 'domisili']
+
+class KlubAdmin(admin.ModelAdmin):
+    list_display = ['nama', 'negara']
+
+admin.site.register(PemainBola, PemainBolaAdmin)
+admin.site.register(Klub, KlubAdmin)

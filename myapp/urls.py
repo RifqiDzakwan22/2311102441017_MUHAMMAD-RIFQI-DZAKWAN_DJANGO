@@ -16,9 +16,23 @@ Including another URLconf
 """
 
 from django.urls import path
-from myapp.views import dashboard
+from myapp.views import (
+    dashboard, 
+    pemainbola_list, 
+    pemainbola_add, pemainbola_update,pemainbola_delete, klub_list, klub_add, klub_detail, 
+    klub_update, klub_delete)
 
 
 urlpatterns =[
- path('', dashboard, name="dashboard"),
+    path('', dashboard, name="dashboard"),
+    path('pemainbola/list', pemainbola_list, name="pemainbola_list"),
+    path('pemainbola/add', pemainbola_add, name="pemainbola_add"),
+    path('pemainbola/update/<int:id_pemain>', pemainbola_update, name="pemainbola_update"),
+    path('pemainbola/delete/<int:id_pemain>', pemainbola_delete, name="pemainbola_delete"),
+
+    path('klub/list>', klub_list, name="klub_list"),
+    path('klub/add>', klub_add, name="klub_add"),
+    path('klub/detail/<int:id_klub>', klub_detail, name="klub_detail"),    
+    path('klub/update/<int:id_klub>', klub_update, name="klub_update"), 
+    path('klub/delete/<int:id_klub>', klub_delete, name="klub_delete"), 
 ]

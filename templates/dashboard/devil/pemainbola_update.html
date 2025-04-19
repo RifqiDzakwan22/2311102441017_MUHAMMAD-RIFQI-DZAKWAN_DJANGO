@@ -1,0 +1,59 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+      <form method="POST" class="form-horizontal">
+        {% csrf_token %}
+        <div class="card-header">
+          <h4 class="card-title">{{ title }}</h4>
+        </div>
+        <div class="card-body">
+          
+            <!--  1 -->
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">NAMA</label>
+              <div class="col-sm-10">
+                <input type="text" name="nama_pemainbola" value="{{ pemainbola.nama }}" class="form-control" required >
+                <small class="form-text text-muted">Wajib Diisi.</small>
+              </div>
+            </div>
+
+            <!--  2 -->
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">ID</label>
+              <div class="col-sm-10">
+                <input type="text" name="id" value="{{ pemainbola.id }}" class="form-control" required >
+                <small class="form-text text-muted">Wajib Diisi.</small>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">DOMISILI</label>
+              <div class="col-sm-10">
+                <input type="text" name="domisili" value="{{ pemainbola.domisili }}" class="form-control" required >
+                <small class="form-text text-muted">Wajib Diisi.</small>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">TANGGAL LAHIR</label>
+              <div class="col-sm-10">
+                <input type="date" name="tanggalLahir" value="{{ pemainbola.tanggalLahir|date:'Y-m-d' }}" class="form-control" required >
+                <small class="form-text text-muted">Jawaban Harus Seperti ini : Tahun-Bulan-Tgl.</small>
+              </div>
+            </div>          
+        </div>
+        <div class="card-footer text-right">
+            <button class="btn btn-success">Simpan</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
