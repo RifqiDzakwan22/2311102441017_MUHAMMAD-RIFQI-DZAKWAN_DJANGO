@@ -1,6 +1,6 @@
 # ✨ Project Django
 ## 🖼️ Deskripsinya
-Website ini adalah web portfolio saya yang sudah pasti isinya tentang diri saya, sebelumnya perkenalkan nama saya Muhammad Rifqi Dzakwan bisa dipanggil Rifqi, dan saya adalah mahasiswa UMKT Samarinda jurusan S1 TEKNIK INFORTMATIKA. Untuk tambahannya saya membuat Django app bernama **myapp** untuk modelnya **pemainbola** ⚽
+Website ini adalah web Tentang Manchester United, sebelumnya perkenalkan nama saya Muhammad Rifqi Dzakwan bisa dipanggil Rifqi, dan saya adalah mahasiswa UMKT Samarinda jurusan S1 TEKNIK INFORTMATIKA. Untuk tambahannya saya membuat Django app bernama **myapp** untuk modelnya **pemainbola** ⚽ **CRUD CUSTOM** ⭐
 ## 📱cara menjalankannya
 1. untuk yang pertama kita harus hapus folder project lama **(bukan yang berisi .gitignore dan README.md).**
 lalu jalankan perintahnya di cmd ya yaitu dengan cara
