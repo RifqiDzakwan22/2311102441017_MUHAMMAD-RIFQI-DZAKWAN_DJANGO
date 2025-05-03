@@ -30,8 +30,8 @@ urlpatterns =[
     path('pemainbola/update/<int:id_pemain>', pemainbola_update, name="pemainbola_update"),
     path('pemainbola/delete/<int:id_pemain>', pemainbola_delete, name="pemainbola_delete"),
 
-    path('klub/list>', klub_list, name="klub_list"),
-    path('klub/add>', klub_add, name="klub_add"),
+    path('klub/list/', klub_list, name="klub_list"),
+    path('klub/add/', klub_add, name="klub_add"),
     path('klub/detail/<int:id_klub>', klub_detail, name="klub_detail"),    
     path('klub/update/<int:id_klub>', klub_update, name="klub_update"), 
     path('klub/delete/<int:id_klub>', klub_delete, name="klub_delete"), 
