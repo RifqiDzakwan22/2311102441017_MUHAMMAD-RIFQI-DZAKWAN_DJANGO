@@ -23,7 +23,11 @@
             <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" role="button" id="dropdownMenuPages10" data-bs-toggle="dropdown" aria-expanded="false">
 
           <li class="nav-item">
+            {% if user.is_authenticated %}
             <a href="http://127.0.0.1:8000/dashboard/" class="btn btn-sm  bg-gradient-primary  mb-0 me-1">Halaman Dashboard</a>
+            {% else %}
+            <a href="{% url 'akun_login' %}" class="btn btn-sm  bg-gradient-primary  mb-0 me-1">login</a>
+            {% endif %}
           </li>
         </ul>
       </div>
