@@ -19,10 +19,10 @@ Coded by www.creative-tim.com
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'dashboard/assets/img//apple-icon.png' %}">
-  <link rel="icon" type="image/png" href="{% static 'dashboard/assets/img//favicon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'dashboard/assets/img//favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Menu Login
+    Registrasi Akun
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -30,12 +30,12 @@ Coded by www.creative-tim.com
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
   <link href="{% static 'dashboard/assets/css/bootstrap.min.css' %}" rel="stylesheet" />
-  <link href="{% static 'dashboard/assets/css/paper-dashboard.css' %}?v=2.1.1' %" rel="stylesheet" />
+  <link href="{% static 'dashboard/assets/css/paper-dashboard.css' %}?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{% static 'dashboard/assets/demo/demo.css' %}" rel="stylesheet" />
 </head>
 
-<body class="login-page">
+<body class="register-page">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
     <div class="container">
@@ -47,70 +47,138 @@ Coded by www.creative-tim.com
             <span class="navbar-toggler-bar bar3"></span>
           </button>
         </div>
-        <a class="navbar-brand" href="http://127.0.0.1:8000">Manchester United</a>
+        <a class="navbar-brand" href="javascript:;">Buat akun duluu</a>
       </div>
-    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+      </button>
     </div>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="http://127.0.0.1:8000/dashboard/autentikasi/login" class="nav-link">
+              <i class="nc-icon nc-layout-11"></i>
+              Login
+            </a>
+          </li>
   </nav>
   <!-- End Navbar -->
   <div class="wrapper wrapper-full-page ">
-    <div class="full-page section-image" filter-color="black" data-image="{% static 'dashboard/assets/img/bg/fabio-mangione.jpg' %}">
-      <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+    <div class="full-page register-page section-image" filter-color="black" data-image="{% static 'dashboard/assets/img/bg/jan-sendereks.jpg' %}">
       <div class="content">
         <div class="container">
-          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-            <form class="form" method="POST">
-              {% csrf_token %}
-              <div class="card card-login">
-                <div class="card-header ">
-                  <div class="card-header ">
-                    <h3 class="header text-center">Login</h3>
-                  </div>
+          <div class="row">
+            <div class="col-lg-5 col-md-5 ml-auto">
+              <div class="info-area info-horizontal mt-5">
+                <div class="icon icon-primary">
+                  <i class="nc-icon nc-tv-2"></i>
                 </div>
-                <p class="descriptiont text-center">{{ pesan }}</p>
-
-                <div class="card-body ">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="nc-icon nc-single-02"></i>
-                      </span>
-                    </div>
-                    <input name="username"type="text" class="form-control" placeholder="Username" required>
-                  </div>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="nc-icon nc-key-25"></i>
-                      </span>
-                    </div>
-                    <input name="password" type="password" placeholder="Password" class="form-control" required>
-                  </div>
-                  <br />
-                  <div class="form-group">
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" value="" checked="">
-                        <span class="form-check-sign"></span>
-                        Subscribe to Youtube Manchester United
-                      </label>
-                    </div>
-                  </div>
+                <div class="description">
+                  <h5 class="info-title">Marketing</h5>
+                  <p class="description">
+                    We've created the marketing campaign of the website. It was a very interesting collaboration.
+                  </p>
                 </div>
-                <div class="card-footer ">
-                  <button href="submit" class="btn btn-warning btn-round btn-block mb-3">Login</button>
-                </div>
-                <div class="text-center" style="margin: 20px;">
-                <a href="{% url 'akun_registrasi' %}">Klik disini jika ingin registarsi?</a>
               </div>
-            </form>
+              <div class="info-area info-horizontal">
+                <div class="icon icon-primary">
+                  <i class="nc-icon nc-html5"></i>
+                </div>
+                <div class="description">
+                  <h5 class="info-title">Fully Coded in HTML5</h5>
+                  <p class="description">
+                    We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+                  </p>
+                </div>
+              </div>
+              <div class="info-area info-horizontal">
+                <div class="icon icon-info">
+                  <i class="nc-icon nc-atom"></i>
+                </div>
+                <div class="description">
+                  <h5 class="info-title">Built Audience</h5>
+                  <p class="description">
+                    There is also a Fully Customizable CMS Admin Dashboard for this product.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mr-auto">
+              <div class="card card-signup text-center">
+                <div class="card-header ">
+                  <h4 class="card-title">Register</h4>
+                  <div class="social">
+                    <p class="card-description"> Silahkan diisi </p>
+                  </div>
+                </div>
+                <div class="card-body ">
+                  <form class="form" method="POST" action="{% url 'akun_registrasi' %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-single-02"></i>
+                        </span>
+                      </div>
+                      <input type="text" name="username" class="form-control" placeholder="Username">
+                    </div>
+                     <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-single-02"></i>
+                        </span>
+                      </div>
+                      <input type="text" name="nama_depan" class="form-control" placeholder="First Name">
+                    </div>
+                     <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-single-02"></i>
+                        </span>
+                      </div>
+                      <input type="text" name="nama_belakang" class="form-control" placeholder="Last Name">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-circle-10"></i>
+                        </span>
+                      </div>
+                      <input type="password" name="password1" placeholder="Password" class="form-control"  placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-circle-10"></i>
+                        </span>
+                      </div>
+                      <input type="password" name="password2" class="form-control" placeholder="Ulangi Password">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="nc-icon nc-email-85"></i>
+                        </span>
+                      </div>
+                      <input type="email" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="card-footer ">
+                  <button href="submit" class="btn btn-warning btn-round btn-block mb-3">Submit</button>
+                  </form>
+                </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
-
+            <nav class="footer-nav">
+            </nav>
             <div class="credits ml-auto">
               <span class="copyright">
                 © <script>
@@ -157,7 +225,7 @@ Coded by www.creative-tim.com
   <!--  Plugin for the Bootstrap Table -->
   <script src="{% static 'dashboard/assets/js/plugins/nouislider.min.js' %}"></script>
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE' %}"></script>
   <!-- Chart JS -->
   <script src="{% static 'dashboard/assets/js/plugins/chartjs.min.js' %}"></script>
   <!--  Notifications Plugin    -->

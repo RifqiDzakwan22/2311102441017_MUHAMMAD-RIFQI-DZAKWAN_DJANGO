@@ -22,7 +22,7 @@ from myapp.views import (
     pemainbola_add, pemainbola_update,pemainbola_delete, klub_list, klub_add, klub_detail, 
     klub_update, klub_delete)
 
-from myapp.autentikasi import akun_login
+from myapp.autentikasi import akun_login, akun_registrasi, akun_logout
 
 
 urlpatterns =[
@@ -38,5 +38,7 @@ urlpatterns =[
     path('klub/update/<int:id_klub>', klub_update, name="klub_update"), 
     path('klub/delete/<int:id_klub>', klub_delete, name="klub_delete"), 
 
-    path('autentikasi/login', akun_login, name="akun_login")
+    path('autentikasi/login', akun_login, name="akun_login"),
+    path('autentikasi/registrasi', akun_registrasi, name="akun_registrasi"),
+    path('autentikasi/logout', akun_logout, name="akun_logout"),
 ]
