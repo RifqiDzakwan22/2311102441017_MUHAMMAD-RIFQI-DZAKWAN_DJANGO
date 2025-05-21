@@ -1,8 +1,18 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required, user_passes_test
+
+
 from myapp.models import PemainBola, Klub
 from myapp.forms import KlubForm
 
 # Create your views here.
+def is_operator(user):
+    if user.groups.filter(name='Operator').exists():
+        return True
+    else:
+        return False
+
+@login_required
 def dashboard(request):
     
     template_name = "dashboard/index.html"
@@ -11,6 +21,8 @@ def dashboard(request):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/authentikasi/logout')
 def pemainbola_list(request):
 
     template_name = "dashboard/devil/pemainbola_list.html"
@@ -22,6 +34,8 @@ def pemainbola_list(request):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/authentikasi/logout')
 def pemainbola_add(request):
     template_name = "dashboard/devil/pemainbola_add.html"
     if request.method == "POST":
@@ -44,6 +58,8 @@ def pemainbola_add(request):
     }
     return render(request, template_name, contex)
 
+@login_required
+@user_passes_test(is_operator, login_url='/authentikasi/logout')
 def pemainbola_update(request, id_pemain):
     template_name = "dashboard/devil/pemainbola_update.html"
     try:
@@ -64,6 +80,8 @@ def pemainbola_update(request, id_pemain):
     }
     return render(request, template_name, context)
 
+@login_required
+@user_passes_test(is_operator, login_url='/authentikasi/logout')
 def pemainbola_delete(request, id_pemain):
     try:
         pemainbola = PemainBola.objects.get(id=id_pemain)
@@ -72,7 +90,7 @@ def pemainbola_delete(request, id_pemain):
         pass
     return redirect(pemainbola_list)
 
-
+@login_required
 def klub_list(request):
     template_name = "dashboard/devil/klub_list.html"
     klub = Klub.objects.all()
@@ -83,6 +101,7 @@ def klub_list(request):
     }
     return render(request, template_name, context)
 
+@login_required
 def klub_add(request):
     template_name = "dashboard/devil/klub_forms.html"
     if request.method == "POST":
@@ -105,6 +124,7 @@ def klub_add(request):
     }
     return render(request, template_name, context)
 
+@login_required
 def klub_detail(request, id_klub):
     template_name = "dashboard/devil/klub_detail.html"
     klub = Klub.objects.get(id=id_klub)
@@ -114,6 +134,7 @@ def klub_detail(request, id_klub):
     }
     return render(request, template_name, context)
 
+@login_required
 def klub_update(request, id_klub):
     template_name = "dashboard/devil/klub_forms.html"
     klub = Klub.objects.get(id=id_klub)
@@ -133,6 +154,7 @@ def klub_update(request, id_klub):
     }
     return render(request, template_name, context)
 
+@login_required
 def klub_delete(request, id_klub):
     try:
         Klub.objects.get(id= id_klub).delete()
