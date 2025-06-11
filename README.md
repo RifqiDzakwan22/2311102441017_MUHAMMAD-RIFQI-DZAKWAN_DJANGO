@@ -63,3 +63,23 @@ python manage.py startapp "nama app mu bebas aja"
 ```shell
 python manage.py makemigrations "nama app yang kamu buat tadi ;)"
 ```
+
+8. untuk menjalankan migrasi database
+```shell
+python manage.py migrate
+```
+
+9. buat menambahkan manage.py dan project kita
+```shell
+django-admin startproject myproject .
+```
+
+10. buat aktifkan static
+```shell
+python manage.py collectstatic
+```
+
+11. buat django admin
+```shell
+python manage.py createsuperuser
+```
