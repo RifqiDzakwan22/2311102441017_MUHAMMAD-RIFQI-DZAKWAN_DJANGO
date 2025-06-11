@@ -7,6 +7,14 @@ lalu jalankan perintahnya di cmd ya yaitu dengan cara
 ```shell
 git clone https://github.com/RifqiDzakwan22/2311102441017_MUHAMMAD-RIFQI-DZAKWAN_DJANGO.git
 ```
+```
+git init          # inisialisasi repo Git di folder lokal
+git clone <url>   # clone repo GitHub ke lokal
+git add .         # add semua file ke staging area
+git commit -m "pesan commit"   # buat commit
+git push          # push ke GitHub
+git pull          # ambil update terbaru dari GitHub
+```
 
 2. Masuk kedalam mode virtual environment dengan cara
 
